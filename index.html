@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>L2R - Eternity</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<center>
+<h1>Состав клана</h1>
+</center>
+<br><br>
+	<table cellpadding="0" cellspacing="0" border="0" id="table" class="sortable">
+		<thead>
+			<tr>
+				<th class="nosort"><h3>ID</h3></th>
+				<th><h3>Имя</h3></th>
+				<th><h3>Игровой ник</h3></th>
+				<th><h3>Лвл</h3></th>
+				<th><h3>Уровень БМ</h3></th>
+				<th><h3>Профа</h3></th>
+				<th><h3>Пати</h3></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>Игорь</td>
+				<td>Одеялко</td>
+				<td>187</td>
+				<td>541к</td>
+				<td>ЕЕ (хил)</td>
+				<td>АП</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Миша</td>
+				<td>ZeRcool</td>
+				<td>137</td>
+				<td>449к</td>
+				<td>FR (лук)</td>
+				<td>АП</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Ваня</td>
+				<td>Enemy</td>
+				<td>131</td>
+				<td>407к</td>
+				<td>SS (маг)</td>
+				<td>АП</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Артур</td>
+				<td>|Versus|</td>
+				<td>143</td>
+				<td>424к</td>
+				<td>Pal (танк)</td>
+				<td>АП</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>Хис</td>
+				<td>Хис</td>
+				<td>133</td>
+				<td>441к</td>
+				<td>BD (БД)</td>
+				<td>АП</td>
+			</tr>
+		</tbody>
+  </table>
+
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript">
+  var sorter = new TINY.table.sorter("sorter");
+	sorter.head = "head";
+	sorter.asc = "asc";
+	sorter.desc = "desc";
+	sorter.even = "evenrow";
+	sorter.odd = "oddrow";
+	sorter.evensel = "evenselected";
+	sorter.oddsel = "oddselected";
+	sorter.paginate = true;
+	sorter.currentid = "currentpage";
+	sorter.limitid = "pagelimit";
+	sorter.init("table",1);
+  </script>
+</body>
+</html>
