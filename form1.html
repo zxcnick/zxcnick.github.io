@@ -1,0 +1,44 @@
+<hmtl>
+
+	<head>
+<link href="https://surveyjs.azureedge.net/1.0.49/survey.css" type="text/css" rel="stylesheet" />
+<script src="https://surveyjs.azureedge.net/1.0.49/survey.jquery.min.js"></script>
+	</head>
+
+<body>
+
+	<p>
+Опросник клана ETERNITY
+	</p>
+
+	<br>
+	<br>
+Наш клан - не карцер. У нас можно умеренно материться и слегка не сдержанно высказывать эмоции. :}
+	<br>
+Политические темы ЗАПРЕЩЕНЫ!
+
+
+
+<div id="surveyContainer"></div>
+
+<script>
+
+var surveyJSON = {locale:"ru",pages:[{name:"page1",elements:[{type:"text",name:"question1",title:"Какова ваша цель пребывания в клане? ",isRequired:true},{type:"text",name:"question2",title:"Каким классом вы играете(полное название на русском) ",isRequired:true},{type:"radiogroup",name:"question3",title:"Сколько вы играете в игру? ",isRequired:true,choices:[{value:"item1",text:"Новичок"},{value:"item2",text:"Пару недель"},{value:"item3",text:"Пару месяцев"},{value:"item4",text:"С открытия сервера"}]},{type:"radiogroup",name:"question4",title:"Сколько можете уделять времени игре? (честно пожалуйста) ",isRequired:true,choices:[{value:"item1",text:"Менее часа"},{value:"item2",text:"1-2 часа"},{value:"item3",text:"Я задрот, зачем вообще выходить из игры"}]},{type:"dropdown",name:"question5",title:"В какое время вы более активны в игре по МСК?(выберите несколько, если такого это требует) ",isRequired:true,choices:[{value:"item1",text:"00:00 - 02:00"},{value:"item2",text:"02:00 - 04:00"},{value:"item3",text:"04:00 - 06:00"},{value:"item4",text:"06:00 - 08:00"},{value:"item5",text:"08:00 - 10:00"},{value:"item6",text:"10:00 - 12:00"},{value:"item7",text:"12:00 - 14:00"},{value:"item8",text:"14:00 - 16:00"},{value:"item9",text:"16:00 - 18:00"},{value:"item10",text:"18:00 - 20:00"},{value:"item11",text:"20:00 - 22:00"},{value:"item12",text:"22:00 - 24:00"}]},{type:"radiogroup",name:"question6",title:"Как Вы относитесь к мату? (Т.е. стоит добавлять Вас в беседу, где многое-что-может-случится или нет) ",isRequired:true,choices:[{value:"item1",text:"Вообще похуй!"},{value:"item2",text:"Негативно"}]},{type:"text",name:"question7",title:"Введите свой ник(это важно для обработки информации) *"},{type:"radiogroup",name:"question8",title:"Ваш возраст? *",choices:[{value:"item1",text:"14-20 лет"},{value:"item2",text:"20-30"},{value:"item3",text:"30-40"},{value:"item4",text:"40+"},{value:"item5",text:"Вечно молодой"}]},{type:"radiogroup",name:"question9",title:"Чито исчо посадить на огороде за клан холом?",choices:[{value:"item1",text:"Морковку для кролика"},{value:"item2",text:"Какие наркотики?"},{value:"item3",text:"Цветник где много девочек и мальчиков для каждого соклана)))))"}]},{type:"radiogroup",name:"question10",title:"Если ли препятствия для игры, в виде супруга(и) или детей? *",choices:[{value:"item1",text:"Нет"},{value:"item2",text:"Есть. И супруга и ребенок"},{value:"item3",text:"Есть кот!!!"}]},{type:"radiogroup",name:"question11",title:"Смотрите ли вы гайды по игре?",choices:[{value:"item1",text:"Не интересуют"},{value:"item2",text:"Смотрю"},{value:"item3",text:"Я сам их пишу"}]},{type:"radiogroup",name:"question12",title:"Время сбора \"21:30\" на КРБ(клановым боссам) вас устраивает? *",choices:[{value:"item1",text:"Да, вполне удобно"},{value:"item2",text:"Не всегда успеваю"},{value:"item3",text:"Не удобно совсем"}]},{type:"radiogroup",name:"question13",title:"Какие страницы редких умений для вас более важны? *",choices:[{value:"item1",text:"Метеоритный шторм"},{value:"item2",text:"Целительный удар"},{value:"item3",text:"Метошторм и стрела"}]},{type:"checkbox",name:"question14",title:"Какие сундуки с клановым приданным вам нужны? *",choices:[{value:"item1",text:"Онли пухи"},{value:"item2",text:"Больше бижутерии Богу Бижутерии"},{value:"item3",text:"Сундуки со шмотом"}]},{type:"radiogroup",name:"question15",title:"question1Нужно ли вам постоянное пати(КП)? *",choices:[{value:"item1",text:"Ну естесвенна"},{value:"item2",text:"Я соло игрок"},{value:"item3",text:"Индифферентно. Могу играть и так и так"}]},{type:"checkbox",name:"question16",title:"С каким видом пожертвования в клан у вас возникают проблемы? *",choices:[{value:"item1",text:"Абема"},{value:"item2",text:"Адена"},{value:"item3",text:"Кр.зв.камни(драконы)"},{value:"item4",text:"Кровь"}]},{type:"radiogroup",name:"question17",title:"Как вы относитесь к фарму банок на прирост получения ядер монстров в других кланах? *",choices:[{value:"item1",text:"Положительно"},{value:"item2",text:"Отрицательно"},{value:"item3",text:"Нейтрально"}]},{type:"radiogroup",name:"question18",title:"Какой режим игры для вас более приятен? *",choices:[{value:"item1",text:"РvP"},{value:"item2",text:"PvE"},{value:"item3",text:"Оба варианта"}]},{type:"radiogroup",name:"question19",title:"Надо ли распределять мвп на клановых рб? *",choices:[{value:"item1",text:"Нет"},{value:"item2",text:"Да."}]}]}]}
+
+function sendDataToServer(survey) {
+    //send Ajax request to your web server.
+    alert("The results are:" + JSON.stringify(survey.data));
+}
+
+var survey = new Survey.Model(surveyJSON);
+$("#surveyContainer").SurveyWindow({
+    model: survey,
+    onComplete: sendDataToServer
+});
+</script>
+
+</body>
+
+
+
+</hmtl>
